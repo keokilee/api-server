@@ -25,7 +25,6 @@ var mockData = require('../data/mock_data.js');
 //       for(var i = 0; i < mockData.length; i++) {
 //          db.incident
 //         .create({
-//           item: mockData[i].item,
 //           date: mockData[i].date,
 //           code: mockData[i].code,
 //           type: mockData[i].type,
@@ -45,7 +44,6 @@ var mockData = require('../data/mock_data.js');
 //       console.log('It worked!');
 //     }
 //       }
-     
 //   });
 
 fs

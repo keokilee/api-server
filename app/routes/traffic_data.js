@@ -40,13 +40,17 @@ router.get('/type/:type', function(req, res) {
 
 
 router.get('/incidents', function(req, res) {
+    var date = new Date();
     models.incident
-      .findAll ({
-        where: {
-          date: {
-            gt: new Date(date.setFullYear(date.getFullYear()-2))
-          }
-        }
+      // .findAll ({
+      //   where: {
+      //     date: {
+      //       gt: new Date(date.setFullYear(date.getFullYear()-2))
+      //     }
+      //   }
+      // })
+      models.incident.findAll({
+        order: 'date DESC'
       })
       .then(function(incidents) {
         res.json(incidents);

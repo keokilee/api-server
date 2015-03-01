@@ -3,7 +3,7 @@ var app = express();
 var models = require('./app/models/index');
 
 app.use('/api', require('./app/routes/traffic_data'));
-
+app.use('/1.0', require('./app/routes/traffic_data'));
 
 var server = app.listen(3000, function () {
 
